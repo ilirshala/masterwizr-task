@@ -1,0 +1,17 @@
+.activeThumbnail {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  &_item {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: green;
+    filter: grayscale(0.8);
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+}

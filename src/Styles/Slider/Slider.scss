@@ -1,0 +1,11 @@
+.sliderContainer {
+  width: 60%;
+  height: 80vh;
+  margin: auto;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 70px;
+}

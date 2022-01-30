@@ -1,5 +1,42 @@
 .sliderContent {
   width: 100%;
   height: 70%;
-  background: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  gap: 10px;
+  &_buttons {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    padding: 0 20px;
+    cursor: pointer;
+    background: white;
+    .MuiSvgIcon-root {
+      color: blue;
+    }
+  }
+  &_allImages {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    .image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 20px;
+    }
+  }
+  &_allImages.activeImage {
+    display: inline-block;
+    border-radius: 20px;
+  }
+  &_allImages.noActiveImage {
+    display: none;
+  }
 }

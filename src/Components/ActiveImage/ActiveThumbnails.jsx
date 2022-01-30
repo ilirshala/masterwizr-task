@@ -1,15 +1,24 @@
 import React from "react";
 import "../../Styles/ActiveImage/ActiveThumbnails.scss";
 
-function ActiveThumbnails() {
+function ActiveThumbnails({ activeIndex, changeIndexFunction, images }) {
   return (
     <div className="activeThumbnail">
-      <div className="activeThumbnail_item"></div>
-      <div className="activeThumbnail_item"></div>
-      <div className="activeThumbnail_item"></div>
-      <div className="activeThumbnail_item"></div>
-      <div className="activeThumbnail_item"></div>
-      <div className="activeThumbnail_item"></div>
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`${
+            activeIndex === index
+              ? "activeThumbnail_item activeItem"
+              : "activeThumbnail_item"
+          }`}
+          style={{
+            backgroundImage:
+              activeIndex === index ? `url(${image.thumbnailUrl})` : "",
+          }}
+          onClick={() => changeIndexFunction(index)}
+        ></div>
+      ))}
     </div>
   );
 }

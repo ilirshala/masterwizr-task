@@ -20,10 +20,9 @@ const fetchAllImages = (state = INITIAL_STATE, action) => {
       };
     }
     case FETCH_IMAGES_SUCCESS: {
-      console.log("SUCCESS", state);
       return {
         ...state,
-        images: [...action.payload],
+        images: [...action.payload.slice(0, 6)],
         isLoading: false,
         errorMessage: null,
       };

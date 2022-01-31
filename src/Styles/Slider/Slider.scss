@@ -1,5 +1,5 @@
 .sliderContainer {
-  width: 70%;
+  width: 80%;
   height: 80vh;
   margin: auto;
   display: flex;
@@ -7,4 +7,48 @@
   justify-content: space-around;
   flex-direction: column;
   gap: 80px;
+}
+
+/* XS Devices */
+@media (max-width: 575px) {
+  .sliderContainer {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/* SM Devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .sliderContainer {
+    display: block;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+/* MD Devices */
+@media (min-width: 768px) and (max-width: 990px) {
+  .sliderContainer {
+    display: block;
+
+    width: 95%;
+    height: 80vh;
+  }
+}
+
+/* LG Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sliderContainer {
+    display: block;
+    height: 90vh;
+  }
+}
+
+/* XL Devices */
+@media (min-width: 1200px) {
+  .sliderContainer {
+    display: flex;
+    justify-content: center;
+  }
 }

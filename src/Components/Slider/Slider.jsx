@@ -29,12 +29,9 @@ function Slider() {
     }
   };
 
-  //Need some fixes on last prev item to get back on last in array
   const prevImageFunction = () => {
-    if (activeIndex < 1) {
-      return len;
-    } else if (activeIndex === len || activeIndex === 0) {
-      console.log(activeIndex, "ACTIVEEEEEE");
+    if (activeIndex === 0) {
+      setActiveIndex(5);
     } else {
       setActiveIndex(activeIndex - 1);
     }

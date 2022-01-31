@@ -3,23 +3,24 @@ import "../../Styles/ActiveImage/ActiveThumbnails.scss";
 
 function ActiveThumbnails({ activeIndex, changeIndexFunction, images }) {
   return (
-    <div className="activeThumbnail">
+    <section class="card">
       {images.map((image, index) => (
-        <div
-          key={index}
-          className={`${
-            activeIndex === index
-              ? "activeThumbnail_item activeItem"
-              : "activeThumbnail_item"
-          }`}
-          style={{
-            backgroundImage:
-              activeIndex === index ? `url(${image.thumbnailUrl})` : "",
-          }}
-          onClick={() => changeIndexFunction(index)}
-        ></div>
+        <div className="card--content">
+          <div
+            className={`${
+              activeIndex === index ? "thumbnail active" : "thumbnail"
+            }`}
+            key={index}
+            onClick={() => changeIndexFunction(index)}
+            style={{
+              backgroundImage:
+                activeIndex === index ? `url(${image.thumbnailUrl})` : "",
+            }}
+          ></div>
+          <p>{image.title.split(" ").shift()}</p>
+        </div>
       ))}
-    </div>
+    </section>
   );
 }
 

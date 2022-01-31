@@ -40,3 +40,53 @@
     display: none;
   }
 }
+
+/* XS Devices */
+@media (max-width: 575px) {
+  .sliderContent {
+    &_buttons {
+      display: none;
+    }
+    &_allImages {
+      width: 75%;
+      height: 50%;
+    }
+  }
+}
+
+/* SM Devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .sliderContent {
+    &_buttons {
+      display: none;
+    }
+    &_allImages {
+      width: 75%;
+      height: 50%;
+    }
+  }
+}
+
+/* MD Devices */
+@media (min-width: 768px) and (max-width: 990px) {
+  .sliderContent {
+    &_allImages {
+      width: 75%;
+      height: 70%;
+    }
+  }
+}
+
+/* LG Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sliderContent {
+    &_allImages {
+      width: 75%;
+      height: 70%;
+    }
+  }
+}
+
+/* XL Devices */
+@media (min-width: 1200px) {
+}
